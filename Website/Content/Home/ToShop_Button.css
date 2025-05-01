@@ -1,0 +1,34 @@
+.ToShop_Button {
+    position: absolute;
+    width: 23%;
+    height: 8%;
+
+    left: 25%;
+    top: 60%;
+
+    background-color: black;
+    border-radius: 10px;
+    border: 2px transparent solid;
+
+    color: aliceblue;
+    font-size: medium;
+    font-family: Montserrat-Regular;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    cursor: pointer;
+
+    z-index: inherit;
+}
+
+.ToShop_Button:hover {
+    border: 2px lightgrey solid;
+}
+
+.ToShop_Button:active {
+    border: 2px grey solid;
+}
