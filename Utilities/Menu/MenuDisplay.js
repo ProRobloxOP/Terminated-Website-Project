@@ -41,6 +41,8 @@ function DisplayMenu() {
 MenuUI.style.left = "-100%";
 
 window.addEventListener("message", (event) => {
+    console.log(event.origin);
+    console.log(event.data.message);
     if (event.origin !== window.location.origin){
         return;
     }
