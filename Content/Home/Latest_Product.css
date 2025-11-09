@@ -1,0 +1,26 @@
+#Latest_Products {
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+
+    z-index: inherit;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#Latest_ProductIMG{
+    position: absolute;
+    display: flex;
+
+    top: 5%;
+    left: 15%;
+
+    width: 75%;
+
+    border: 2px grey solid;
+    
+    z-index: 0;
+}

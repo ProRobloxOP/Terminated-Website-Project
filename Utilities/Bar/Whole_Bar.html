@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<style>
+    p {
+        font-family: Montserrat-Regular;
+    }
+
+    h1 {
+        font-family: Montserrat-Regular;
+    }
+
+    body{
+        background-color: Snow;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="">
+
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="WelcomeDiv.css">
+    <link rel="stylesheet" href="TopbarDiv.css">
+    <link rel="stylesheet" href="/Terminated-Website-Project/Fonts/Montserrat/Montserrat.css">
+</head>
+
+<body style="overflow-y: auto;">
+    <script src="/Terminated-Website-Project/Utilities/Global_Settings.js"></script>
+    
+    <!-- Welcome Sign Creation -->
+    <p id = "WelcomeSign">Welcome to our store</p>
+
+    <!-- Title Sign -->
+    <h1 id="TitleSign">Luer de Vie</h1>
+
+    <!-- Menu Button -->
+    <div id="MenuButtonContainer">
+        <input type="image" src="/Terminated-Website-Project/Assets/Images/menu.svg" id="MenuButton" onclick="menuButtonClicked()">
+        <div id="MenuDIV"></div>
+    </div>
+
+    <script>
+        menuButtonClicked = function(){
+            try {
+                if (window.parent) {
+                    window.postMessage({ message: "ToggleMenu", sender: window.location.pathname }, window.parent.origin);
+                }
+            } catch (e) { }
+        }
+    </script>
+
+    <!-- Message Posters -->
+
+     <!-- To Parent -->
+    <script>
+        window.addEventListener("message", (event) => {
+            if (event.origin !== window.location.origin) {
+                return;
+            }
+
+            if (event.data.href) {
+                parent.postMessage(event.data, window.origin);
+            }
+        })
+    </script>
+
+</html>
