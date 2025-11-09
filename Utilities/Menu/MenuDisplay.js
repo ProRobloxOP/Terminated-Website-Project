@@ -39,11 +39,8 @@ function DisplayMenu() {
 
 // Default Position For Menu
 MenuUI.style.left = "-100%";
-console.log("Menu is displaying!");
 
 window.addEventListener("message", (event) => {
-    console.log(event.origin);
-    console.log(event.data.message);
     if (event.origin !== window.location.origin){
         return;
     }
