@@ -47,10 +47,8 @@
     <script>
         menuButtonClicked = function(){
             try {
-                console.log(window.parent);
                 if (window.parent) {
-                    console.log("TOGGLING MENU!");
-                    window.postMessage({ message: "ToggleMenu", sender: window.location.pathname }, window.parent.origin);
+                    parent.postMessage({ message: "ToggleMenu", sender: window.location.pathname }, window.parent.origin);
                 }
             } catch (e) { }
         }
